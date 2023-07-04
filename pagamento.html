@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>GeekStore :: Pagamento</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body style="min-width: 372px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom border-danger shadow-sm mb-3">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#"><strong>GeekStore</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-danger" aria-current="page" href="principal.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="cadastro.html">Cadastre-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="cadastro.html">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Procure por aqui!" aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Procurar</button>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    <main class="flex-fill">
+        <div class="container">
+            <h1>Selecione a forma de Pagamento</h1>
+            <h3 class="mb-4">
+                Selecione a forma de pagamento  clique em <b>Continuar</b> para prosseguir para <b>concluir o pedido</b>.
+            </h3>
+            <div class="d-flex justify-content-between flex-wrap border rounded-top pt-4 px-3">
+                <div class="mb-4 mx-2 flex-even">
+                    <input type="radio" class="btn-check" name="pagamento" autocomplete="off" id="pag1">
+                    <label class="btn btn-outline-danger p-4 h-100 w-100" for="end1">
+                        <h3>
+                            <b class="text-dark">Cartão de Crédito</b>
+                        </h3>
+                        <hr>
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" id="txtNome" class="form-control" placeholder=" " autofocus>
+                                <label for="txtNome" class="text-black-50">Nome Impresso no Cartão</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" id="txtNumero" class="form-control" placeholder=" ">
+                                <label for="txtNumero" class="text-black-50">Número do Cartão</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" id="txtValidade" class="form-control" placeholder=" ">
+                                <label for="txtValidade" class="text-black-50">Validade (mm/aa)</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" id="txtCodigo" class="form-control" placeholder=" ">
+                                <label for="txtCodigo" class="text-black-50">Código de Segurança</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <select id="selParcelas" class="form-select">
+                                    <option value="1" selected>À vista</option>
+                                    <option value="2">2 x sem juros</option>
+                                    <option value="3">3 x sem juros</option>
+                                    <option value="4">4 x sem juros</option>
+                                    <option value="5">5 x sem juros</option>
+                                    <option value="6">6 x sem juros</option>
+                                </select>
+                                <label for="selParcelas" class="text-black-50">Parcelamento</label>
+                            </div>
+                        </form>
+
+                    </label>
+                </div>
+                <div class="mb-4 mx-2 flex-even">
+                    <input type="radio" class="btn-check" name="pagamento" autocomplete="off" id="pag2">
+                    <label class="btn btn-outline-danger p-4 h-100 w-100" for="pag2">
+                        <h3>
+                            <b class="text-dark">Dinheiro</b>
+                        </h3>
+                        <hr>
+                        <form action="">
+                            <h4>Valor da Compra: <b>R$ 109,80</b></h4>
+                            <br>
+                            <p>
+                                Se precisar de troco, informe no campo abaixo.
+                            </p>
+                            <div class="form-floating mb-3">
+                                <input type="text" id="txtTroco" class="form-control" placeholder=" ">
+                                <label for="txtTroco" class="text-black-50">Precisa de troco para quanto?</label>
+                            </div>
+                        </form>
+
+                    </label>
+                </div>
+            </div>
+            <div class="text-end border border-top-0 rounded-bottom p-2 pb-0">
+            <a href="endereco.html" class="btn btn-outline-dark btn-lg mb-3">
+                Voltar ao endereço
+            </a>
+            <a href="finalizar.html" class="btn btn-danger btn-lg ms-2 mb-3">
+                Finalizar compra
+            </a>
+        </div>
+    </main>
+
+    <div style="height: 273px;" class="d-block d-md-none"></div>
+    <div style="height: 153px;" class="d-none d-md-block d-lg-none"></div>
+    <div style="height: 129px;" class="d-none d-lg-block"></div>
+
+    <footer class="border-top fixed-bottom text-muted bg-light">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-12 col-md-4 text-center text-md-left">
+                    &copy; 2023 - GeekStore
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <a href="#" class="text-decoration-none text-dark">Política de Privacidade</a>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-right">
+                    <a href="#" class="text-decoration-none text-dark">Administrar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
